@@ -1,0 +1,19 @@
+{
+  "name": "odin-project-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css":"npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "start":"lite-server && npm run build:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.11"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
