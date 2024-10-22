@@ -6,7 +6,108 @@
     <title>Document</title>
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body>
-    <h1 class="text-3xl font-bold text-green-600">Hello world!</h1>
+  <body class="bg-mainBg">
+    <main class="flex items-center justify-center gap-10 mt-10">
+      <!-- Player one  -->
+      <section
+        class="shadow-custom bg-playBg w-[330px] h-[654px] border-[14px] border-borderColor rounded-[28px] px-[44px] py-[20px] flex flex-column items-center justify-center font-customBold"
+      >
+        <div>
+          <div
+            class="bg-playerNameBg text-playerNametext rounded-[16px] border-[8px] border-playerNameBorder text-3.5xl flex justify-center items-center pb-[5px]"
+          >
+            <p>Player One</p>
+          </div>
+
+          <div class="mt-6">
+            <label class="text-3.5xl flex justify-center text-heading" for="name"
+              >Name</label
+            >
+            <input
+              class="w-[90] h-[3.5rem] font-bold rounded-[16px] bg-InputBg border-[8px] border-InputBorderColor px-[2x] py-[6px] opacity-75"
+              type="text"
+              name=""
+              id="name"
+            />
+          </div>
+
+          <div class="mt-6">
+            <label for="p1-mark" class="text-3.5xl flex justify-center text-heading" for="name"
+              >Mark</label
+            >
+            <div class="flex space-x-4 justify-center" id="p1-mark">
+              <button class="flex items-center justify-center mt-1 text-mark0 text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px]" data-mark-index="0" data-in-use="" disabled>O</button>
+              <button class="flex items-center justify-center mt-1 text-markx text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px]" data-mark-index="1" disabled>X</button>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label for="p1-score" class="text-3.5xl flex justify-center text-heading font-customBold">Score</label>
+            <div id="p1-score" class="m-auto flex items-center justify-center text-scoreColor text-[3.5rem] bg-playerNameBg border-[8px] border-playerNameBorder w-[90px] h-[90px] rounded-[16px]">0</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <!-- Info box  -->
+        <div class="w-[700px] h-[110px] font-customBold">
+          <h1 class="shadow-custom text-infoTextColor text-4xl text-center h-[70px] w-[600px]pt-2 bg-infoBg border-[8px] border-infoBorder rounded-[16px]">Welcome! check the buttons below</h1>
+        </div>
+        
+        <!-- Board  -->
+        <div class="h-[600px] w-7600px] rounded-[28px] bg-boardBg shadow-custom"></div>
+
+        <!-- Set Details  -->
+        <div class="flex justify-center items-center h-[70px] text-3xl mt-10 font-bold space-x-4">
+          <button class="py-2 px-[1.2rem] shadow-custom bg-toolbarBg rounded-[16px] border-[8px] border-toolbarBorder text-toolbarTextColor" data-group-position="1" >Set Players</button>
+          <button class="py-2 px-[1.2rem] shadow-custom bg-toolbarBg rounded-[16px] border-[8px] border-toolbarBorder text-toolbarTextColor" data-group-position="2" >New Game</button>
+          <button class="py-2 px-[1.2rem] shadow-custom bg-toolbarBg rounded-[16px] border-[8px] border-toolbarBorder text-toolbarTextColor" data-group-position="3" >Reset Scores</button>
+        </div>
+      </section>
+
+       <!-- Player Two  -->
+       <section
+       class="shadow-custom bg-playBg w-[330px] h-[654px] border-[14px] border-borderColor rounded-[28px] px-[44px] py-[20px] flex flex-column items-center justify-center font-customBold"
+     >
+       <div>
+         <div
+           class="bg-playerNameBg text-playerNametext rounded-[16px] border-[8px] border-playerNameBorder text-3.5xl flex justify-center items-center pb-[5px]"
+         >
+           <p>Player Two</p>
+         </div>
+
+         <div class="mt-6">
+           <label class="text-3.5xl flex justify-center text-heading" for="name"
+             >Name</label
+           >
+           <input
+             class="w-[90] h-[3.5rem] font-bold rounded-[16px] bg-InputBg border-[8px] border-InputBorderColor px-[2x] py-[6px] opacity-75"
+             type="text"
+             name=""
+             id="name"
+           />
+         </div>
+
+         <div class="mt-6">
+           <label for="p1-mark" class="text-3.5xl flex justify-center text-heading" for="name"
+             >Mark</label
+           >
+           <div class="flex space-x-4 justify-center" id="p1-mark">
+             <button class="flex items-center justify-center mt-1 text-mark0 text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px]" data-mark-index="0" data-in-use="" disabled>O</button>
+             <button class="flex items-center justify-center mt-1 text-markx text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px]" data-mark-index="1" disabled>X</button>
+           </div>
+         </div>
+
+         <div class="mt-6">
+           <label for="p1-score" class="text-3.5xl flex justify-center text-heading font-customBold">Score</label>
+           <div id="p1-score" class="m-auto flex items-center justify-center text-scoreColor text-[3.5rem] bg-playerNameBg border-[8px] border-playerNameBorder w-[90px] h-[90px] rounded-[16px]">0</div>
+         </div>
+       </div>
+     </section>
+
+
+
+      <div></div>
+    </main>
   </body>
 </html>
