@@ -9,7 +9,8 @@
     <script src="script.js" defer></script>
   </head>
   <body class="bg-mainBg">
-    <main class="flex items-center justify-center gap-10 mt-10 font-jua ml-8">
+    <main class="flex items-center justify-center gap-10 mt-10 font-jua">
+
       <!-- Player one  -->
       <section
         class="shadow-custom bg-playBg w-[330px] h-[654px] border-[14px] border-borderColor rounded-[28px] px-[44px] py-[20px] flex flex-column items-center justify-center font-customBold"
@@ -26,7 +27,7 @@
               >Name</label
             >
             <input
-              class="w-[90] h-[3.5rem] font-bold rounded-[16px] bg-InputBg border-[8px] border-InputBorderColor px-[2x] py-[6px] opacity-75"
+              class="name-input w-[90%] h-[3.5rem] font-bold rounded-[16px] bg-InputBg border-[8px] border-InputBorderColor px-[2x] py-[6px] opacity-75"
               type="text"
               name=""
               id="name"
@@ -38,19 +39,20 @@
             <label for="p1-mark" class="text-3.5xl flex justify-center text-heading" for="name"
               >Mark</label
             >
-            <div class="flex space-x-4 justify-center" id="p1-mark">
-              <button class="flex items-center justify-center mt-1 text-mark0 text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px] opacity-75" data-mark-index="0" data-in-use="" disabled>O</button>
-              <button class="off deactivate-font flex items-center justify-center mt-1 text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px] opacity-75" data-mark-index="1" disabled>X</button>
+            <div class="mark-group flex space-x-4 justify-center" id="p1-mark">
+              <button class="flex items-center justify-center mt-1 text-mark0 text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px]" data-mark-index="0" data-in-use="" disabled >O</button>
+              <button class="off flex items-center text-markx justify-center mt-1 text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px]" data-mark-index="1" disabled>X</button>
             </div>
           </div>
 
           <div class="mt-6">
             <label for="p1-score" class="text-3.5xl flex justify-center text-heading font-customBold">Score</label>
-            <div id="p1-score" class="m-auto flex items-center justify-center text-scoreColor text-[3.5rem] bg-playerNameBg border-[8px] border-playerNameBorder w-[90px] h-[90px] rounded-[16px]">0</div>
+            <div id="p1-score" class="score m-auto flex items-center justify-center text-scoreColor text-[3.5rem] bg-playerNameBg border-[8px] border-playerNameBorder w-[90px] h-[90px] rounded-[16px]">0</div>
           </div>
         </div>
       </section>
-
+      
+      <!-- Main board  -->
       <section>
         <!-- Info box  -->
         <div class="w-[600px] h-[110px] font-customBold">
@@ -58,15 +60,13 @@
         </div>
         
         <!-- Board  -->
-        <div class="board h-[600px] w-[600px] rounded-[28px] bg-boardBg shadow-custom grid grid-rows-3 grid-cols-3 gap-[14px] p-5">
-          <button class="bg-boardCellBg rounded-[8px]"></button>
-        </div>
+        <div class="board h-[600px] w-[600px] rounded-[28px] bg-boardBg shadow-custom grid grid-rows-3 grid-cols-3 gap-[14px] p-4"></div>
 
         <!-- Set Details  -->
-        <div class="flex justify-center items-center h-[70px] text-3xl mt-10 font-bold space-x-4">
-          <button class="py-2 px-[1.2rem] shadow-custom bg-toolbarBg rounded-[16px] border-[8px] border-toolbarBorder text-toolbarTextColor" data-group-position="1" >Set Players</button>
-          <button class="py-2 px-[1.2rem] shadow-custom bg-toolbarBg rounded-[16px] border-[8px] border-toolbarBorder text-toolbarTextColor" data-group-position="2" >New Game</button>
-          <button class="py-2 px-[1.2rem] shadow-custom bg-toolbarBg rounded-[16px] border-[8px] border-toolbarBorder text-toolbarTextColor" data-group-position="3" >Reset Scores</button>
+        <div class="toolbar flex justify-center items-center h-[70px] text-3xl mt-10 font-bold space-x-4">
+          <button class="py-2 px-[1.2rem] shadow-custom rounded-[16px] border-[8px] text-disableColor border-disableBorder" data-group-position="1" >Set Players</button>
+          <button class="py-2 px-[1.2rem] shadow-custom rounded-[16px] border-[8px] text-disableColor border-disableBorder" data-group-position="2" >New Game</button>
+          <button class="py-2 px-[1.2rem] shadow-custom rounded-[16px] border-[8px] text-disableColor border-disableBorder" data-group-position="3" >Reset Scores</button>
         </div>
       </section>
 
@@ -86,7 +86,7 @@
              >Name</label
            >
            <input
-             class="w-[90] h-[3.5rem] font-bold rounded-[16px] bg-InputBg border-[8px] border-InputBorderColor px-[2x] py-[6px] opacity-75"
+             class="name-input w-[90] h-[3.5rem] font-bold rounded-[16px] bg-InputBg border-[8px] border-InputBorderColor px-[2x] py-[6px] opacity-75"
              type="text"
              name=""
              id="name"
@@ -98,22 +98,19 @@
            <label for="p1-mark" class="text-3.5xl flex justify-center text-heading" for="name"
              >Mark</label
            >
-           <div class="flex space-x-4 justify-center" id="p1-mark">
-             <button class="off deactivate-font flex items-center justify-center mt-1 text-mark0 text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px] opacity-75" data-mark-index="0" data-in-use="" disabled>O</button>
-             <button class="flex items-center justify-center mt-1 text-markx text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px] opacity-75" data-mark-index="1" disabled>X</button>
+           <div class="mark-group flex space-x-4 justify-center" id="p1-mark">
+             <button class="off flex items-center text-mark0 justify-center mt-1 text-mark0 text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px]" data-mark-index="2" data-in-use="" disabled>O</button>
+             <button class="flex items-center justify-center mt-1 text-markx text-[3.5rem] bg-InputBg border-[8px] border-InputBorderColor w-[90px] h-[90px] rounded-[16px]" data-mark-index="3" disabled>X</button>
            </div>
          </div>
 
          <div class="mt-6">
            <label for="p1-score" class="text-3.5xl flex justify-center text-heading font-customBold">Score</label>
-           <div id="p1-score" class="m-auto flex items-center justify-center text-scoreColor text-[3.5rem] bg-playerNameBg border-[8px] border-playerNameBorder w-[90px] h-[90px] rounded-[16px]">0</div>
+           <div id="p1-score" class="score m-auto flex items-center justify-center text-scoreColor text-[3.5rem] bg-playerNameBg border-[8px] border-playerNameBorder w-[90px] h-[90px] rounded-[16px]">0</div>
          </div>
        </div>
      </section>
 
-
-
-      <div></div>
     </main>
   </body>
 </html>

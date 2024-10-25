@@ -3,9 +3,33 @@
 @tailwind utilities;
 
 .off {
-  @apply text-deactiveColor;
+  @apply text-deactiveColor text-5xl;
 }
 
-.deactivate-font{
-    @apply text-5xl
+.nought {
+  @apply text-nought;
+}
+
+.cross {
+  @apply text-cross;
+}
+
+.name-input:enabled {
+  @apply border-InputEnableBorderColor bg-white text-scoreColor;
+}
+
+.mark-group > *:enabled {
+  @apply border-InputEnableBorderColor bg-white;
+}
+
+.mark-group > *:disabled {
+  @apply opacity-75;
+}
+
+.toolbar > *:disabled {
+  @apply opacity-75;
+}
+
+.toolbar > *:enabled {
+  @apply bg-toolbarBg border-toolbarBorder text-toolbarTextColor;
 }
