@@ -6,7 +6,7 @@
   "scripts": {
     "build:css":"npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "start":"lite-server",
-    "server":"npm run build:css & npm run start"
+    "server":"npm run build:css && lite-server"
   },
   "keywords": [],
   "author": "",

@@ -438,3 +438,51 @@ const Info = (() => {
 })();
 
 ScreenController();
+
+
+/********** Flow of logic **********/
+
+/*
+There are basically there components 
+1) Gameboard
+  --> where our board design logic is written 
+
+   ****** Components 
+   1) Cell (factory function) :- It represent the each cell on the tic tac toe board 
+              it contains 
+              a) value -> what value it contains whether 'X' or 'O'
+              b) getValue -> What value that cell contains 
+              c) ResetValue -> Reseting the value of the cell
+    
+   2) markBoard :- To add the value of a particular cell in the board.
+   
+   3) getBoard :- Returns the board , at a particular instance of time.
+
+   4) resetBoard :- Reseting the values of board , making all the cell value as empty string.
+
+
+2) Game Controller 
+  --> Where Players are created and logic of winning the game and etc are written
+
+  ****** Components 
+  1) Players (factory function) :- It will create two player with all their values and functions to manipulate their value and turn.
+  2) Check for win :- This function will check the board value at every action performed by the players and check whether it is 
+                      a win probability
+  3) PlayRound :- Here the main logic of Game is written after game is started.
+  4) Winline :- It holds the starting and ending index of the winning line and also contains the function to manipulate it.
+  5) GameActiveState :- To state whether game is in progress or not.
+
+3) Screen Controller 
+  --> Here logic is written for what actions needs to perform when we click on screen.
+
+  ****** Components 
+  1) UpdateScreen :- This function update the screen when there is view change on screen.
+  2) toggleToolbar :- This function contains the logic of activating and deactiving the toggle button when clicked on any of this
+                      toggle button.
+  3) togglePlayerInfo :- This function is used to add or upate the player information.
+  4) clickHandlerBoard :- This function is called when we click on cell of board, to update the value of each cell either with 
+                          'X' or 'O'
+  5) clickHandlerToolbar :- This function is called when we click on any of the toggle button , to perform the particular option.
+  6) clickHandlerMarkGroup :- Contains the logic of adding or removing the off class from markGroups               
+
+*/
